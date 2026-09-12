@@ -25,10 +25,17 @@ const preview: Preview = {
       defaultTheme: "light",
       attributeName: "data-theme",
     }),
-    (story) => ({
+    (story, context) => ({
       components: { story: story() },
+      setup() {
+        // Full-bleed background only in standalone story view; on a Docs
+        // page, stories are embedded inline and must size to their content
+        // — min-height: 100vh there blows the preview up to a full screen
+        // of empty background past the actual component.
+        return { isDocs: context.viewMode === "docs" };
+      },
       template: `
-        <div style="padding: 2rem; min-height: 100vh; box-sizing: border-box; background: var(--background-gradient); font-family: var(--font-sans); color: var(--text-color);">
+        <div :style="{ padding: '2rem', minHeight: isDocs ? 'auto' : '100vh', boxSizing: 'border-box', background: 'var(--background-gradient)', fontFamily: 'var(--font-sans)', color: 'var(--text-color)' }">
           <story />
         </div>
       `,
