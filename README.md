@@ -1,9 +1,10 @@
 # Portfolio Design System
 
 A documented, browsable Vue 3 component library, extracted directly from
-[nuxt-portfolio](https://github.com/philipalgebrink/nuxt-portfolio) — my live portfolio site — rather than
-built as a generic Button/Card/Modal kit from a tutorial. Every component here traces back to a real file in
-that project: the hover-glow cards, the button styles, the color tokens, the theme toggle's animation timing.
+[philipalgebrink.se](https://philipalgebrink.se) — my live portfolio site
+([source](https://github.com/philipalgebrink/nuxt-portfolio)) — rather than built as a generic Button/Card/Modal
+kit from a tutorial. Every component here traces back to a real file in that project: the hover-glow cards, the
+button styles, the color tokens, the theme toggle's animation timing.
 
 **[View the deployed Storybook](#)** _(link goes live once GitHub Pages deploys — see below)_
 
