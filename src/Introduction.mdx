@@ -1,0 +1,27 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# Portfolio Design System
+
+This isn't a generic Button/Card/Modal kit built from a tutorial — every component here is extracted directly from
+[nuxt-portfolio](https://github.com/philipalgebrink/nuxt-portfolio), my live portfolio site. The hover-glow cards,
+the button styles, the color tokens, even the theme toggle's animation timing: all of it is ported 1:1 from real,
+shipped code, not reinvented for this library.
+
+## Why this exists
+
+The portfolio's About Me page claims "clean UI, polished experiences." This library is the proof: a documented,
+browsable version of the actual design system behind that claim, with every component traceable back to the file
+it came from (see each component's docs page for the source reference).
+
+## Stack
+
+- Vue 3 + `<script setup>` + TypeScript
+- Plain CSS custom properties for tokens (no Tailwind) — the same approach the portfolio itself uses
+- [`@iconify/vue`](https://iconify.design) for icons, using the same `mdi:*` names as the portfolio's `@nuxt/icon`
+
+## Try it
+
+Use the **Theme** toolbar control above (the sun/moon icon) to flip every component between light and dark mode —
+that's the same token system flipping, not a separate light/dark build.
